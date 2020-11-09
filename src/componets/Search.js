@@ -52,15 +52,21 @@ const Search = (props) => {
       <TextInput
         style={[styles.input, styles.input2]}
         onChangeText={(text) => setGramos(text)}
-        value={value}
+        value={gramos}
       />
-      <Text style={{fontSize: 18}}>Indique el nombre del animento: </Text>
+      <Text style={{fontSize: 18}}>Indique el nombre del alimento: </Text>
       <TextInput
         style={styles.input}
-        onChangeText={(text) => onChangeText(text)}
+        onChangeText={(text) => {
+          onChangeText(text)
+          // buscarbtn(value)
+        }}
         value={value}
       />
-      <Button title="Buscar" onPress={() => buscarbtn(value)} />
+      <Button title="Buscar" onPress={() => {
+          console.log(value);
+          buscarbtn(value);
+      } } />
       {/*<RNSelect
         datas={LANGS}
         placeholder="Select lang"
@@ -108,9 +114,9 @@ const styles = StyleSheet.create({
     // flex: 1,
     // justifyContent: 'center',
     alignItems: 'center',
-    height: '20%',
+    height: '30%',
   },
-  input2:{
+  input2: {
     width: '30%',
   },
   input: {

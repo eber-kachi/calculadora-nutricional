@@ -59,7 +59,7 @@ const HomeScreen = () => {
             if (value !== undefined) {
               return (
                 <View style={styles.col}>
-                  <Text>producto: {value?.name}</Text>
+                  <Text>Producto: {value?.name}</Text>
                   <Text>Caloria: {value?.caloria.value} </Text>
                   <Text>Carbohidratos: {value?.carbohidrato.value} </Text>
                   <Text>Proteina: {value?.proteina.value} </Text>
@@ -67,6 +67,13 @@ const HomeScreen = () => {
                 </View>
               );
             }
+            // } else {
+            //   return (
+            //     // <View style={styles.col}>
+            //     //   <Text>Producto no encontrado...</Text>
+            //     // </View>
+            //   );
+            // }
           })}
         </View>
       </View>
